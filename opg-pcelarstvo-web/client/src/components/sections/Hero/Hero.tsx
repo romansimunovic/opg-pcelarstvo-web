@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-
+import heroImage from "../../../assets/images/hero-image.jpg";
 export default function Hero() {
 
   return (
@@ -132,17 +132,28 @@ export default function Hero() {
         >
 
           <div
-            className="
-            h-96
-            w-full
-            rounded-3xl
-            bg-cream
-            "
-          />
+  className="
+  relative
+  h-[450px]
+  w-full
+  overflow-hidden
+  rounded-[2rem]
+  bg-cream
+  "
+>
 
+<img
+  src={heroImage}
+  alt="Prirodni med iz pčelinjaka"
+  className="
+    h-full
+    w-full
+    object-cover
+  "
+/>
+
+</div>
         </div>
-
-
       </div>
 
     </section>

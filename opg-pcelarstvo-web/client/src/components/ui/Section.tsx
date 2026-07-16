@@ -1,22 +1,25 @@
 import { cn } from "../../utils/cn";
 
-interface ContainerProps {
+interface SectionProps {
   children: React.ReactNode;
   className?: string;
+  id?: string;
 }
 
-export default function Container({
+export default function Section({
   children,
   className,
-}: ContainerProps) {
+  id,
+}: SectionProps) {
   return (
-    <div
+    <section
+      id={id}
       className={cn(
-        "mx-auto w-full max-w-7xl px-6 lg:px-8",
+        "py-24",
         className
       )}
     >
       {children}
-    </div>
+    </section>
   );
 }
