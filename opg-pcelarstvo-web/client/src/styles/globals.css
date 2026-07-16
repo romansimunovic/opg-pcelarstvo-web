@@ -43,3 +43,22 @@ body {
   var(--color-background);
 
 }
+
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  overflow-x: hidden;
+}
+
+
+img {
+  max-width: 100%;
+}
+
+body {
+  background:#FFF7E6;
+  color:#422006;
+}

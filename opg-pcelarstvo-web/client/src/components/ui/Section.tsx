@@ -1,25 +1,33 @@
 import { cn } from "../../utils/cn";
 
 interface SectionProps {
-  children: React.ReactNode;
-  className?: string;
-  id?: string;
+ children: React.ReactNode;
+ id?: string;
+ className?: string;
 }
 
+
 export default function Section({
-  children,
-  className,
-  id,
-}: SectionProps) {
-  return (
-    <section
-      id={id}
-      className={cn(
-        "py-24",
-        className
-      )}
-    >
-      {children}
-    </section>
-  );
+ children,
+ id,
+ className=""
+}:SectionProps){
+
+return (
+
+<section
+id={id}
+className={`
+py-20
+sm:py-24
+${className}
+`}
+>
+
+{children}
+
+</section>
+
+)
+
 }

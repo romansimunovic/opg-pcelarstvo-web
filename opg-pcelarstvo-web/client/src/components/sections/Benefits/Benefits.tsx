@@ -34,7 +34,9 @@ const benefits = [
 export default function Benefits() {
 
   return (
-    <Section>
+    <Section
+className="bg-cream"
+>
 
       <Container>
 

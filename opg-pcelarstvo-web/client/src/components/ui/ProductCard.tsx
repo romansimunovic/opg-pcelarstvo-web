@@ -29,7 +29,8 @@ export default function ProductCard({
         src={product.image}
         alt={product.name}
         className="
-        h-64
+        h-56
+        sm:h-64
         w-full
         object-cover
         "

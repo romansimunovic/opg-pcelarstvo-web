@@ -8,7 +8,10 @@ import { products } from "../../../data/products";
 
 export default function Products() {
   return (
-    <Section id="products">
+    <Section
+id="products"
+className="bg-white"
+>
 
       <Container>
 

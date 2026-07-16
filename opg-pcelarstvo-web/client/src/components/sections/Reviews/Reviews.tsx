@@ -26,7 +26,9 @@ export default function Reviews() {
 
   return (
 
-    <Section>
+    <Section
+className="bg-cream"
+>
 
       <Container>
 

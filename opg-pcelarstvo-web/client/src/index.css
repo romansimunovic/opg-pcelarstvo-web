@@ -1,33 +1,64 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
 
-/* Design tokens */
+@theme {
+
+  --color-honey: #EB9605;
+  --color-honey-light: #F4B642;
+  --color-cream: #FFF8ED;
+  --color-background: #FFFCF8;
+
+  --color-brown: #3C2B1D;
+  --color-brown-light: #6A4C2B;
+
+  --color-sage: #6E8B4D;
+  --color-border: #EFE4D3;
+
+  --color-white: #FFFFFF;
+
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-heading: "Cormorant Garamond", serif;
+
+}
+
+
+
 :root {
-  --honey: #EB9605;
-  --honey-light: #F4B642;
-  --cream: #FFF8ED;
-  --background: #FFFCF8;
-  --brown: #3C2B1D;
-  --brown-light: #6A4C2B;
-  --sage: #6E8B4D;
-  --border: #EFE4D3;
-  --white: #FFFFFF;
 
   --radius: 1.25rem;
-  --shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+
+  --shadow:
+    0 12px 40px rgba(60, 43, 29, 0.08);
+
 }
+
+
 
 html {
+
   scroll-behavior: smooth;
+
 }
 
+
+
 body {
+
   margin: 0;
-  font-family: "Inter", system-ui, sans-serif;
+
   background: var(--background);
+
   color: var(--brown);
+
+  font-family: "Inter", system-ui, sans-serif;
+
   -webkit-font-smoothing: antialiased;
+
   -moz-osx-font-smoothing: grayscale;
+
 }
+
+
 
 h1,
 h2,
@@ -35,20 +66,54 @@ h3,
 h4,
 h5,
 h6 {
+
   font-family: "Cormorant Garamond", serif;
+
   color: var(--brown);
+
 }
+
+
 
 * {
+
   box-sizing: border-box;
+
 }
+
+
 
 img {
+
   display: block;
+
   max-width: 100%;
+
 }
 
+
+
 a {
+
   color: inherit;
+
   text-decoration: none;
+
+}
+
+
+
+/* Custom utilities */
+
+.shadow-brand {
+
+  box-shadow: var(--shadow);
+
+}
+
+
+.text-balance {
+
+  text-wrap: balance;
+
 }
