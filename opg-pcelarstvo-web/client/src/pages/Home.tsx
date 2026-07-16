@@ -4,6 +4,7 @@ import Products from "../components/sections/Products";
 import Story from "../components/sections/Story";
 import Gallery from "../components/sections/Gallery";
 import Reviews from "../components/sections/Reviews";
+import Contact from "../components/sections/Contact";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <Story />
         <Gallery />
         <Reviews />
+        <Contact />
     </>
   );
 }
