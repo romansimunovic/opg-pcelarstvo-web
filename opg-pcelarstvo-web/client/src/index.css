@@ -1,77 +1,28 @@
 @import "tailwindcss";
 
+@theme {
+  --color-honey: #EB9605;
+  --color-honey-light: #F4B642;
+  --color-background: #FFFCF8;
+  --color-cream: #FFF8ED;
+  --color-brown: #3C2B1D;
+  --color-brown-light: #6A4C2B;
+  --color-border: #EFE4D3;
 
-:root {
-
---honey:#EB9605;
---honey-dark:#C87900;
-
---cream:#FFF4DC;
-
---background:#FFF9EF;
-
---brown:#3A2415;
-
---brown-light:#765538;
-
---border:#E8D7BA;
-
+  --font-heading: "Cormorant Garamond", serif;
+  --font-body: "Inter", sans-serif;
 }
 
-
-html{
-
-scroll-behavior:smooth;
-
-}
-
-
-
-body{
-
-margin:0;
-
-background:#FFF9EF;
-
-color:#3A2415;
-
-font-family:"Inter",sans-serif;
-
-}
-
-
-
-h1,
-h2,
-h3,
-h4{
-
-font-family:"Cormorant Garamond",serif;
-
-}
-
-
-
-*{
-
-box-sizing:border-box;
-
-}
-
-
-
-img{
-
-max-width:100%;
-
-display:block;
-
-}
-
-
-
-a{
-
-text-decoration:none;
-
+/* Osnovni reset za cijeli projekt */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    margin: 0;
+    font-family: var(--font-body);
+    background-color: var(--color-background);
+    color: var(--color-brown);
+    overflow-x: hidden;
+  }
 }
