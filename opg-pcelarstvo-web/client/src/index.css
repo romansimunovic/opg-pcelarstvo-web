@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+/* Design tokens */
+:root {
+  --honey: #EB9605;
+  --honey-light: #F4B642;
+  --cream: #FFF8ED;
+  --background: #FFFCF8;
+  --brown: #3C2B1D;
+  --brown-light: #6A4C2B;
+  --sage: #6E8B4D;
+  --border: #EFE4D3;
+  --white: #FFFFFF;
+
+  --radius: 1.25rem;
+  --shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, sans-serif;
+  background: var(--background);
+  color: var(--brown);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Cormorant Garamond", serif;
+  color: var(--brown);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
