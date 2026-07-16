@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme {
+  --color-honey: #EB9605;
+  --color-honey-light: #F4B642;
+  --color-background: #FFFCF8;
+  --color-cream: #FFF8ED;
+  --color-brown: #3C2B1D;
+  --color-brown-light: #6A4C2B;
+  --color-border: #EFE4D3;
+
+  --font-heading: "Cormorant Garamond", serif;
+  --font-body: "Inter", sans-serif;
+}
+
+/* Osnovni reset za cijeli projekt */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    margin: 0;
+    font-family: var(--font-body);
+    background-color: var(--color-background);
+    color: var(--color-brown);
+    overflow-x: hidden;
+  }
+}

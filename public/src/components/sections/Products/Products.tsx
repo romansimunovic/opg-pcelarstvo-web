@@ -1,4 +1,3 @@
-// Products.tsx
 import Container from "../../ui/Container";
 import Section from "../../ui/Section";
 import SectionTitle from "../../ui/SectionTitle";
@@ -15,12 +14,12 @@ export default function Products() {
           description="Odabrani proizvodi nastali pažljivim radom i brigom prema pčelama. Izravno s pčelinjaka do vašeg stola."
         />
 
-        {/* Rešetka s proizvodima */}
+        {/* Promijenjen grid s boljim razmakom i 3 stupca na desktopu */}
         <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {products.map((product) => (
             <ProductCard
               key={product.id}
-              product={product} // <-- Samo proslijedi product bez ikakvih modifikacija!
+              product={{ ...product, price: String(product.price) }}
             />
           ))}
         </div>

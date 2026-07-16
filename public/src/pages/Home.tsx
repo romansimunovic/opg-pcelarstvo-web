@@ -5,6 +5,7 @@ import Story from "../components/sections/Story";
 import Gallery from "../components/sections/Gallery";
 import Reviews from "../components/sections/Reviews";
 import Contact from "../components/sections/Contact";
+import Footer from "../components/layout/Footer";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <Gallery />
         <Reviews />
         <Contact />
+        <Footer />
     </>
   );
 }
