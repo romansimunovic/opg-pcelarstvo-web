@@ -23,7 +23,7 @@ export default function Navbar() {
           
           {/* Logo */}
           <h1 className="font-heading text-3xl font-bold text-[#3A2415]">
-            Smješka 🍯
+            Medenjak 🍯
           </h1>
 
           {/* Desni dio: Navigacija i Košarica */}

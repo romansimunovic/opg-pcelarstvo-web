@@ -42,7 +42,7 @@ export default function Logo() {
           leading-none
           "
         >
-          Smješka
+          Medenjak
         </p>
 
 

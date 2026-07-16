@@ -46,7 +46,7 @@ export default function Gallery() {
               {/* Suptilni tamni sloj i tekst koji se pojave tek kad se prijeđe mišem */}
               <div className="absolute inset-0 bg-gradient-to-t from-brown/80 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100 flex items-end p-6">
                 <div className="transform translate-y-4 transition-transform duration-300 group-hover:translate-y-0">
-                  <p className="text-white/80 text-xs font-semibold tracking-wider uppercase">OPG Smješka</p>
+                  <p className="text-white/80 text-xs font-semibold tracking-wider uppercase">OPG Medenjak</p>
                   <p className="text-white font-heading text-lg font-bold mt-1 leading-snug">{item.alt}</p>
                 </div>
               </div>

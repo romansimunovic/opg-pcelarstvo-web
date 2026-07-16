@@ -56,7 +56,7 @@ font-bold
 "
 
 >
-Smješka
+Medenjak
 </h3>
 
 
@@ -199,7 +199,7 @@ text-white/60
 
 >
 
-© {new Date().getFullYear()} Pčelarstvo Smješka
+© {new Date().getFullYear()} Pčelarstvo Medenjak
 
 </div>
 

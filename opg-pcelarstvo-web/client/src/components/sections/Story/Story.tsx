@@ -36,7 +36,7 @@ export default function Story() {
 
             <div className="space-y-4 font-body text-base sm:text-lg leading-relaxed text-white/80">
               <p>
-                Pčelarstvo Smješka nastalo je iz čiste ljubavi prema prirodi i želje da se ljudima ponudi pravovjeran, kvalitetan domaći med proizveden na tradicionalan način.
+                Pčelarstvo Medenjak nastalo je iz ljubavi prema prirodi i želje da se ljudima ponudi pravovjeran, kvalitetan domaći med proizveden na tradicionalan način.
               </p>
               <p>
                 Svaka naša teglica predstavlja pažljiv ručni rad, duboko poštovanje prema pčelama i predanost očuvanju prirodnog procesa proizvodnje bez prečaca.

@@ -18,26 +18,25 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
     }).format(amount);
   };
 
-  // Generiranje WhatsApp poruke s narudžbom
-  const handleCheckout = () => {
-    if (cart.length === 0) return;
+const handleCheckout = () => {
+  if (cart.length === 0) return;
 
-    let message = "Pozdrav! Želim naručiti sljedeće proizvode iz Vašeg pčelinjaka:\n\n";
-    
-    cart.forEach((item) => {
-      message += `🐝 *${item.name}* (${item.weight}) — ${item.quantity} kom x ${formatPrice(item.price)} = ${formatPrice(item.price * item.quantity)}\n`;
-    });
+  let message = "Pozdrav! Želim naručiti sljedeće proizvode s Vaše web stranice:\n\n";
+  
+  cart.forEach((item) => {
+    message += `🐝 *${item.name}* (${item.weight}) — ${item.quantity} kom x ${formatPrice(item.price)} = ${formatPrice(item.price * item.quantity)}\n`;
+  });
 
-    message += `\n*Ukupno za platiti:* ${formatPrice(cartTotal)}`;
-    message += "\n\nMolim Vas potvrdu narudžbe i informacije o dostavi. Hvala!";
+  message += `\n*Ukupno za platiti:* ${formatPrice(cartTotal)}`;
+  message += "\n\nMolim Vas potvrdu narudžbe i informacije o dostavi. Hvala!";
 
-    // Kreiranje WhatsApp poveznice (koristi tvoj broj telefona umjesto X-eva)
-    const phoneNumber = "385XXXXXXXXX"; // Zamijeni s pravim brojem klijenta
-    const encodedMessage = encodeURIComponent(message);
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+  // Generički dummy broj za demonstraciju (korisnik unosi svoj)
+  const phoneNumber = "385990000000"; 
+  const encodedMessage = encodeURIComponent(message);
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 
-    window.open(whatsappUrl, "_blank");
-  };
+  window.open(whatsappUrl, "_blank");
+};
 
   if (!isOpen) return null;
 
