@@ -1,140 +1,205 @@
+import storyImage from "../../../assets/images/story/beekeeping.jpg";
 import Container from "../../ui/Container";
 import Section from "../../ui/Section";
-import SectionTitle from "../../ui/SectionTitle";
-
-import storyImage from "../../../assets/images/story/beekeeping.jpg";
 
 
-export default function Story() {
-  return (
-    <Section id="about">
-
-      <Container>
-
-        <div
-          className="
-          grid
-          items-center
-          gap-12
-          lg:grid-cols-2
-          "
-        >
-
-          <div
-            className="
-            overflow-hidden
-            rounded-[2rem]
-            "
-          >
-
-            <img
-              src={storyImage}
-              alt="Pčelarstvo i rad s pčelama"
-              className="
-              h-full
-              min-h-[450px]
-              w-full
-              object-cover
-              "
-            />
-
-          </div>
+export default function Story(){
 
 
-          <div>
+return (
 
-            <SectionTitle
-              eyebrow="Naša priča"
-              title="Više od meda, tradicija i ljubav prema prirodi"
-              description="
-              Naš pčelinjak nastaje iz želje da ponudimo
-              kvalitetan prirodni proizvod uz poštovanje
-              prema pčelama i okolišu.
-              "
-            />
+<Section
+id="about"
+className="
+bg-[#3A2415]
+text-white
+"
+>
 
 
-            <p
-              className="
-              mt-8
-              leading-relaxed
-              text-brown-light
-              "
-            >
-              Svaka teglica meda rezultat je pažljivog rada,
-              prirodnog procesa i vremena koje je potrebno
-              da priroda napravi svoje.
-            </p>
+<Container>
 
 
-            <div
-              className="
-              mt-8
-              grid
-              grid-cols-2
-              gap-6
-              "
-            >
+<div
 
-              <div
-                className="
-                rounded-2xl
-                bg-cream
-                p-5
-                "
-              >
+className="
+grid
+items-center
+gap-12
+lg:grid-cols-2
+"
 
-                <p
-                  className="
-                  text-3xl
-                  font-bold
-                  text-honey
-                  "
-                >
-                  100%
-                </p>
-
-                <p className="text-sm text-brown-light">
-                  prirodno
-                </p>
-
-              </div>
+>
 
 
-              <div
-                className="
-                rounded-2xl
-                bg-cream
-                p-5
-                "
-              >
-
-                <p
-                  className="
-                  text-3xl
-                  font-bold
-                  text-honey
-                  "
-                >
-                  Lokalno
-                </p>
-
-                <p className="text-sm text-brown-light">
-                  iz Slavonije
-                </p>
-
-              </div>
+<div>
 
 
-            </div>
+<img
+
+src={storyImage}
+
+alt="Pčelarstvo i briga o pčelama"
+
+loading="lazy"
+
+className="
+rounded-[2.5rem]
+shadow-2xl
+"
+
+/>
 
 
-          </div>
+</div>
 
-        </div>
 
-      </Container>
 
-    </Section>
-  );
+
+<div>
+
+
+<p
+
+className="
+text-sm
+font-semibold
+uppercase
+tracking-[0.25em]
+text-[#EB9605]
+"
+
+>
+
+Naša priča
+
+</p>
+
+
+
+<h2
+
+className="
+mt-5
+font-heading
+text-5xl
+font-bold
+"
+
+>
+
+Tradicija, priroda
+i ljubav prema pčelama
+
+</h2>
+
+
+
+
+<p
+
+className="
+mt-6
+text-lg
+leading-relaxed
+text-white/80
+"
+
+>
+
+Pčelarstvo Smješka nastalo je iz ljubavi
+prema prirodi i želje da se ljudima ponudi
+kvalitetan domaći med proizveden na
+prirodan način.
+
+</p>
+
+
+
+<p
+
+className="
+mt-5
+text-lg
+leading-relaxed
+text-white/80
+"
+
+>
+
+Svaka teglica predstavlja pažljiv rad,
+brigu prema pčelama i poštovanje prema
+prirodnom procesu proizvodnje.
+
+</p>
+
+
+
+
+<div
+
+className="
+mt-8
+flex
+gap-6
+"
+
+>
+
+
+<div>
+
+<p
+className="
+text-3xl
+font-bold
+text-[#EB9605]
+"
+>
+100%
+</p>
+
+<p>
+Prirodno
+</p>
+
+</div>
+
+
+
+<div>
+
+<p
+className="
+text-3xl
+font-bold
+text-[#EB9605]
+"
+>
+∞
+</p>
+
+<p>
+Posvećenost
+</p>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</Container>
+
+
+</Section>
+
+)
+
 }

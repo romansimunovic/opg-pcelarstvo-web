@@ -8,86 +8,100 @@ import image3 from "../../../assets/images/gallery/honey-3.jpg";
 import image4 from "../../../assets/images/gallery/honey-4.jpg";
 
 
-const images = [
-  {
-    src: image1,
-    alt: "Prirodni med",
-  },
-  {
-    src: image2,
-    alt: "Pčelinjak",
-  },
-  {
-    src: image3,
-    alt: "Rad s pčelama",
-  },
-  {
-    src: image4,
-    alt: "Proizvodnja meda",
-  },
+const images=[
+ image1,
+ image2,
+ image3,
+ image4,
 ];
 
 
-export default function Gallery() {
-
-  return (
-    <Section id="gallery">
-
-      <Container>
-
-        <SectionTitle
-          eyebrow="Galerija"
-          title="Pogled u naš svijet pčela"
-          description="
-          Trenuci iz pčelinjaka, prirode i procesa
-          stvaranja naših proizvoda.
-          "
-        />
+export default function Gallery(){
 
 
-        <div
-          className="
-          mt-16
-          grid
-          gap-6
-          sm:grid-cols-2
-          lg:grid-cols-4
-          "
-        >
+return (
 
-          {images.map((image) => (
-
-            <div
-              key={image.src}
-              className="
-              group
-              overflow-hidden
-              rounded-3xl
-              "
-            >
-
-              <img
-                src={image.src}
-                alt={image.alt}
-                className="
-                h-72
-                w-full
-                object-cover
-                transition
-                duration-500
-                group-hover:scale-110
-                "
-              />
-
-            </div>
-
-          ))}
-
-        </div>
+<Section
+id="gallery"
+className="bg-cream"
+>
 
 
-      </Container>
+<Container>
 
-    </Section>
-  );
+
+<SectionTitle
+
+eyebrow="Galerija"
+
+title="Pogled u naš pčelinjak"
+
+description="
+Trenuci iz prirode i svakodnevnog rada s pčelama.
+"
+
+/>
+
+
+
+<div
+
+className="
+mt-16
+grid
+gap-6
+sm:grid-cols-2
+lg:grid-cols-4
+"
+
+>
+
+
+{
+images.map((image,index)=>(
+
+
+<img
+
+key={index}
+
+src={image}
+
+alt="Pčelarstvo"
+
+className={`
+rounded-3xl
+object-cover
+transition
+duration-500
+hover:scale-105
+
+${
+index===0 || index===3
+?
+"h-96"
+:
+"h-72"
+}
+
+`}
+
+/>
+
+
+))
+
+}
+
+
+</div>
+
+
+</Container>
+
+
+</Section>
+
+)
+
 }

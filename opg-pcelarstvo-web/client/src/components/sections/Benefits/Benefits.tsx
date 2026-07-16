@@ -1,133 +1,177 @@
 import {
-  Flower2,
-  Heart,
   Leaf,
+  Heart,
+  ShieldCheck
 } from "lucide-react";
+
 
 import Container from "../../ui/Container";
 import Section from "../../ui/Section";
 import SectionTitle from "../../ui/SectionTitle";
 
 
-const benefits = [
-  {
-    icon: Leaf,
-    title: "100% prirodno",
-    description:
-      "Prirodni proizvodi bez nepotrebnih dodataka."
-  },
-  {
-    icon: Flower2,
-    title: "Lokalna proizvodnja",
-    description:
-      "Med nastaje uz pažljiv rad naših pčela."
-  },
-  {
-    icon: Heart,
-    title: "S ljubavlju prema pčelama",
-    description:
-      "Svaka staklenka nosi dio naše priče."
-  },
+
+const benefits=[
+
+{
+icon:Leaf,
+title:"100% prirodno",
+text:"Med proizveden bez nepotrebnih dodataka."
+},
+
+{
+icon:Heart,
+title:"Briga prema pčelama",
+text:"Pčele i priroda uvijek su na prvom mjestu."
+},
+
+{
+icon:ShieldCheck,
+title:"Domaća kvaliteta",
+text:"Pažljiv rad i provjerena kvaliteta proizvoda."
+}
+
 ];
 
 
-export default function Benefits() {
 
-  return (
-    <Section
-className="bg-cream"
+export default function Benefits(){
+
+
+return (
+
+<Section
+className="
+bg-[#FFF9EF]
+"
 >
 
-      <Container>
 
-        <SectionTitle
-          eyebrow="Zašto naš med?"
-          title="Priroda u svakoj kapljici"
-          description="
-          Tradicija, kvaliteta i pažljiv odnos prema prirodi
-          ono su što naše proizvode čini posebnima.
-          "
-        />
+<Container>
 
 
-        <div
-          className="
-          mt-16
-          grid
-          gap-8
-          md:grid-cols-3
-          "
-        >
+<SectionTitle
 
-          {benefits.map((item) => {
+eyebrow="Zašto mi?"
 
-            const Icon = item.icon;
+title="Više od običnog meda"
 
+description="
+Prirodni proizvod iza kojeg stoji trud,
+znanje i ljubav prema pčelarstvu.
+"
 
-            return (
-
-              <article
-                key={item.title}
-                className="
-                rounded-3xl
-                border
-                border-border
-                bg-white
-                p-8
-                transition
-                hover:-translate-y-2
-                hover:shadow-xl
-                "
-              >
-
-                <div
-                  className="
-                  flex
-                  h-14
-                  w-14
-                  items-center
-                  justify-center
-                  rounded-2xl
-                  bg-honey/10
-                  text-honey
-                  "
-                >
-                  <Icon size={28}/>
-                </div>
+/>
 
 
-                <h3
-                  className="
-                  mt-6
-                  font-heading
-                  text-2xl
-                  font-bold
-                  text-brown
-                  "
-                >
-                  {item.title}
-                </h3>
+
+<div
+
+className="
+mt-16
+grid
+gap-8
+md:grid-cols-3
+"
+
+>
 
 
-                <p
-                  className="
-                  mt-3
-                  text-brown-light
-                  "
-                >
-                  {item.description}
-                </p>
+{
 
-              </article>
+benefits.map((item)=>(
 
-            );
 
-          })}
+<div
 
-        </div>
+key={item.title}
 
-      </Container>
+className="
+rounded-[2rem]
+border
+border-[#E8D7BA]
+bg-[#FFFCF8]
+p-8
+text-center
+shadow-sm
+transition
+hover:-translate-y-2
+"
 
-    </Section>
-  );
+>
+
+
+<div
+
+className="
+mx-auto
+flex
+h-16
+w-16
+items-center
+justify-center
+rounded-full
+bg-[#FFF4DC]
+text-[#EB9605]
+"
+
+>
+
+<item.icon size={32}/>
+
+</div>
+
+
+
+<h3
+
+className="
+mt-6
+font-heading
+text-3xl
+font-bold
+"
+
+>
+
+{item.title}
+
+</h3>
+
+
+
+<p
+
+className="
+mt-4
+text-[#765538]
+"
+
+>
+
+{item.text}
+
+</p>
+
+
+</div>
+
+
+))
+
+
+}
+
+
+</div>
+
+
+</Container>
+
+
+</Section>
+
+
+)
+
 }

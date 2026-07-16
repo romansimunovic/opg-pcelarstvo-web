@@ -1,5 +1,3 @@
-import { cn } from "../../utils/cn";
-
 interface SectionProps {
  children: React.ReactNode;
  id?: string;

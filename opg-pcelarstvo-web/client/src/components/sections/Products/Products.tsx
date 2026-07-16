@@ -6,42 +6,79 @@ import ProductCard from "../../ui/ProductCard";
 import { products } from "../../../data/products";
 
 
-export default function Products() {
-  return (
-    <Section
+
+export default function Products(){
+
+
+return (
+
+<Section
+
 id="products"
-className="bg-white"
+
+className="
+bg-[#FFF4DC]
+"
+
 >
 
-      <Container>
 
-        <SectionTitle
-          eyebrow="Naši proizvodi"
-          title="Prirodni med iz vlastitog pčelinjaka"
-          description="Odabrani proizvodi nastali pažljivim radom i brigom prema pčelama."
-        />
+<Container>
 
 
-        <div
-          className="
-          mt-16
-          grid
-          gap-8
-          md:grid-cols-2
-          "
-        >
+<SectionTitle
 
-          {products.map((product) => (
-            <ProductCard
-              key={product.id}
-              product={product}
-            />
-          ))}
+eyebrow="Naši proizvodi"
 
-        </div>
+title="Prirodni med iz vlastitog pčelinjaka"
 
-      </Container>
+description="
+Odabrani proizvodi nastali pažljivim radom
+i brigom prema pčelama.
+"
 
-    </Section>
-  );
+/>
+
+
+
+<div
+
+className="
+mt-16
+grid
+gap-10
+md:grid-cols-2
+"
+
+>
+
+
+{
+
+products.map(product=>(
+
+<ProductCard
+
+key={product.id}
+
+product={{ ...product, price: String(product.price) }}
+
+/>
+
+))
+
+}
+
+
+</div>
+
+
+</Container>
+
+
+</Section>
+
+
+)
+
 }

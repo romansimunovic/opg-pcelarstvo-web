@@ -1,269 +1,109 @@
 import Container from "../../ui/Container";
 import Section from "../../ui/Section";
-import SectionTitle from "../../ui/SectionTitle";
-
-import {
-  Phone,
-  Mail,
-  MapPin,
-  MessageCircle,
-} from "lucide-react";
 
 
-const contactItems = [
-  {
-    icon: Phone,
-    title: "Telefon",
-    value: "+385 91 000 0000",
-  },
-
-  {
-    icon: Mail,
-    title: "Email",
-    value: "info@pcelarstvo-smjeska.hr",
-  },
-
-  {
-    icon: MapPin,
-    title: "Lokacija",
-    value: "Slavonija, Hrvatska",
-  },
-];
+export default function Contact(){
 
 
-export default function Contact() {
+return (
 
-  return (
-    <Section id="contact">
+<Section
 
-      <Container>
+id="contact"
 
-        <SectionTitle
-          eyebrow="Kontakt"
-          title="Naručite svoj prirodni med"
-          description="
-          Javite nam se i rezervirajte svježi domaći med.
-          "
-        />
+className="
+bg-[#EB9605]
+"
+
+>
 
 
-        <div
-          className="
-          mt-16
-          grid
-          gap-8
-          lg:grid-cols-2
-          "
-        >
+<Container>
 
 
-          <div
-            className="
-            rounded-3xl
-            bg-cream
-            p-8
-            "
-          >
+<div
 
-            <h3
-              className="
-              font-heading
-              text-3xl
-              font-bold
-              text-brown
-              "
-            >
-              Kontakt informacije
-            </h3>
+className="
+rounded-[3rem]
+bg-[#3A2415]
+p-10
+text-center
+text-white
+md:p-16
+"
+
+>
 
 
-            <div
-              className="
-              mt-8
-              space-y-6
-              "
-            >
+<h2
 
-              {contactItems.map((item) => {
+className="
+font-heading
+text-5xl
+font-bold
+"
 
-                const Icon = item.icon;
+>
 
+Želite probati pravi domaći med?
 
-                return (
-                  <div
-                    key={item.title}
-                    className="
-                    flex
-                    items-center
-                    gap-4
-                    "
-                  >
-
-                    <div
-                      className="
-                      flex
-                      h-12
-                      w-12
-                      items-center
-                      justify-center
-                      rounded-xl
-                      bg-white
-                      text-honey
-                      "
-                    >
-                      <Icon size={22}/>
-                    </div>
+</h2>
 
 
-                    <div>
 
-                      <p
-                        className="
-                        text-sm
-                        text-brown-light
-                        "
-                      >
-                        {item.title}
-                      </p>
+<p
 
+className="
+mx-auto
+mt-6
+max-w-xl
+text-white/80
+"
 
-                      <p
-                        className="
-                        font-semibold
-                        text-brown
-                        "
-                      >
-                        {item.value}
-                      </p>
+>
 
-                    </div>
+Kontaktirajte nas i naručite svoje
+omiljene proizvode direktno iz našeg
+pčelinjaka.
 
-                  </div>
-                );
-
-              })}
-
-            </div>
+</p>
 
 
-            <a
-              href="#"
-              className="
-              mt-10
-              flex
-              w-fit
-              items-center
-              gap-2
-              rounded-full
-              bg-honey
-              px-7
-              py-3
-              font-semibold
-              text-white
-              transition
-              hover:bg-honey-light
-              "
-            >
 
-              <MessageCircle size={20}/>
+<a
 
-              WhatsApp narudžba
+href="https://wa.me/3859XXXXXXXX"
 
-            </a>
+target="_blank"
 
+className="
+mt-8
+inline-flex
+rounded-full
+bg-[#EB9605]
+px-10
+py-4
+font-semibold
+text-white
+transition
+hover:bg-[#F4B642]
+"
 
-          </div>
+>
+
+Pošalji upit
+
+</a>
 
 
-          <form
-            className="
-            rounded-3xl
-            border
-            border-border
-            bg-white
-            p-8
-            "
-          >
-
-            <div className="space-y-5">
+</div>
 
 
-              <input
-                type="text"
-                placeholder="Ime i prezime"
-                className="
-                w-full
-                rounded-xl
-                border
-                border-border
-                px-4
-                py-3
-                outline-none
-                focus:border-honey
-                "
-              />
+</Container>
 
 
-              <input
-                type="email"
-                placeholder="Email"
-                className="
-                w-full
-                rounded-xl
-                border
-                border-border
-                px-4
-                py-3
-                outline-none
-                focus:border-honey
-                "
-              />
+</Section>
 
+)
 
-              <textarea
-                placeholder="Vaša poruka"
-                rows={5}
-                className="
-                w-full
-                rounded-xl
-                border
-                border-border
-                px-4
-                py-3
-                outline-none
-                focus:border-honey
-                "
-              />
-
-
-              <button
-                type="submit"
-                className="
-                w-full
-                rounded-full
-                bg-honey
-                py-3
-                font-semibold
-                text-white
-                transition
-                hover:bg-honey-light
-                "
-              >
-                Pošalji upit
-              </button>
-
-
-            </div>
-
-
-          </form>
-
-
-        </div>
-
-
-      </Container>
-
-    </Section>
-  );
 }

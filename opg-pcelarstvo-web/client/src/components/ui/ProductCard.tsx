@@ -1,114 +1,197 @@
-import type { Product } from "../../types/Product";
+import { createWhatsAppLink } from "../../utils/whatsapp";
 
+interface Product {
 
-interface ProductCardProps {
-  product: Product;
+name:string;
+
+description:string;
+
+image:string;
+
+price:string;
+
 }
 
 
+
+interface Props {
+
+product:Product;
+
+}
+
+
+
 export default function ProductCard({
-  product,
-}: ProductCardProps) {
 
-  return (
+product
 
-    <article
-      className="
-      overflow-hidden
-      rounded-3xl
-      border
-      border-border
-      bg-white
-      transition
-      hover:-translate-y-2
-      hover:shadow-xl
-      "
-    >
-
-      <img
-        src={product.image}
-        alt={product.name}
-        className="
-        h-56
-        sm:h-64
-        w-full
-        object-cover
-        "
-      />
+}:Props){
 
 
-      <div className="p-6">
 
-        <h3
-          className="
-          font-heading
-          text-3xl
-          font-bold
-          text-brown
-          "
-        >
-          {product.name}
-        </h3>
+return (
 
+<div
 
-        <p
-          className="
-          mt-3
-          text-brown-light
-          "
-        >
-          {product.description}
-        </p>
+className="
+overflow-hidden
+rounded-[2rem]
+border
+border-[#E8D7BA]
+bg-[#FFFCF8]
+shadow-lg
+transition
+duration-300
+hover:-translate-y-2
+"
+
+>
 
 
-        <div
-          className="
-          mt-6
-          flex
-          items-center
-          justify-between
-          "
-        >
+<div
 
-          <div>
+className="
+h-80
+overflow-hidden
+"
 
-            <p className="text-sm text-brown-light">
-              {product.weight}
-            </p>
-
-            <p
-              className="
-              text-2xl
-              font-bold
-              text-honey
-              "
-            >
-              {product.price.toFixed(2)} €
-            </p>
-
-          </div>
+>
 
 
-          <button
-            className="
-            rounded-full
-            bg-honey
-            px-5
-            py-2
-            text-sm
-            font-semibold
-            text-white
-            hover:bg-honey-light
-            "
-          >
-            Naruči
-          </button>
+<img
 
-        </div>
+src={product.image}
 
-      </div>
+alt={product.name}
 
-    </article>
+loading="lazy"
 
-  );
+className="
+h-full
+w-full
+object-cover
+transition
+duration-500
+hover:scale-110
+"
+
+/>
+
+
+</div>
+
+
+
+<div
+
+className="
+p-8
+"
+
+>
+
+
+<h3
+
+className="
+font-heading
+text-3xl
+font-bold
+text-[#3A2415]
+"
+
+>
+
+{product.name}
+
+</h3>
+
+
+
+
+<p
+
+className="
+mt-4
+leading-relaxed
+text-[#765538]
+"
+
+>
+
+{product.description}
+
+</p>
+
+
+
+
+<div
+
+className="
+mt-6
+flex
+items-center
+justify-between
+"
+
+>
+
+
+<span
+
+className="
+text-2xl
+font-bold
+text-[#EB9605]
+"
+
+>
+
+{product.price}
+
+</span>
+
+
+
+<a
+
+
+href={createWhatsAppLink(product.name)}
+
+target="_blank"
+
+rel="noopener noreferrer"
+
+className="
+rounded-full
+bg-[#3A2415]
+px-5
+py-3
+text-sm
+font-semibold
+text-white
+transition
+hover:bg-[#EB9605]
+"
+
+>
+
+Naruči
+
+</a>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+)
+
 }
